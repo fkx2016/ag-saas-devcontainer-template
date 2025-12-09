@@ -1,8 +1,6 @@
 {
   "name": "AG-SAAS: ${localWorkspaceFolderBasename}",
-  
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "20"
@@ -11,7 +9,6 @@
       "version": "3.11"
     }
   },
-
   "customizations": {
     "vscode": {
       "extensions": [
@@ -19,15 +16,19 @@
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
         "ms-python.vscode-pylance"
-      ]
+      ],
+      "settings": {
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true
+      }
     }
   },
-
-  "postCreateCommand": "pip install --user -r server/requirements.txt || true && npm install --prefix ./client || true",
-
-  "forwardPorts": [3000, 8000],
-  
-  "settings": { 
+  "postCreateCommand": "pip install --user black && pip install --user -r server/requirements.txt || true && npm install --prefix ./client || true",
+  "forwardPorts": [
+    3000,
+    8000
+  ],
+  "settings": {
     "terminal.integrated.defaultProfile.linux": "bash"
   }
 }
