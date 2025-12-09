@@ -1,0 +1,14 @@
+# Data Serialization/Processing
+pydantic
+requests
+
+# Environment Management
+python-dotenv
+
+# Code Quality (For the Devcontainer)
+black
+isort
+flake8
+
+# Testing
+pytest
