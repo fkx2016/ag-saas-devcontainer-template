@@ -1,5 +1,5 @@
 {
-  "name": "AG Python/Node.js SAAS Template",
+  "name": "AG-SAAS: ${localWorkspaceFolderBasename}",
   
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
 
